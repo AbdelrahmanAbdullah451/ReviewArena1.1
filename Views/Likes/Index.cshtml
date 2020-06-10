@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ReviewArena.Models.Like>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@foreach (var item in Model)
+{
+    <div class="cartItem" style=" background:#f9f9f9;
+            border:1px solid #222;
+            color:#222;
+            margin:10px;
+            overflow:hidden">
+        <div style="float: left;
+                        width: 25%;
+                        height: 100%;
+                        background: #ddd;
+                        padding: 20px 10px;
+                        margin-right: 10px;
+                        font-size: 21px;
+                        border: 1px solid;">
+            @*@Html.ActionLink("Remove", "RemoveItem", new { id = item.product_id })*@
+        </div>
+        <div style="float: left;
+                    text-align: center;
+                    width: 72%;
+                    margin: 0;
+                    line-height: 25px;
+                    padding-top: 10px;">
+            <span style="font-size: 18px;letter-spacing: 1px;">@Html.DisplayFor(modelItem => item.Review.ReviewTitle) - </span>
+            <span style="font-size: 18px;letter-spacing: 1px;">@Html.DisplayFor(modelItem => item.Review.ReviewImage)</span>
+            <p style="font-size: 18px;letter-spacing: 1px;">@Html.DisplayFor(modelItem => item.Review.LikesNumber)</p>
+        </div>
+    </div>
+}

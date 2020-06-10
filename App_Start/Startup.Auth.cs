@@ -58,11 +58,11 @@ namespace ReviewArena
             //   appId: "",
             //   appSecret: "");
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            {
-                ClientId = "31742701631-vj19atvrfljgubd4us3kfvf1aklma3nk.apps.googleusercontent.com",
-                ClientSecret = "zewhHhySLnMrq3Q8u6cPOoBq"
-            });
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "",
+            //    ClientSecret = ""
+            //});
         }
     }
 }
